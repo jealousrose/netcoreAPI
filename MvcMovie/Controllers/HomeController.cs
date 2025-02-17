@@ -1,8 +1,8 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using DemoMvc.Models;
+using MvcMovie.Models;
 
-namespace DemoMvc.HomeControllers;
+namespace MvcMovie.Controllers;
 
 public class HomeController : Controller
 {
@@ -17,9 +17,12 @@ public class HomeController : Controller
     {
         return View();
     }
+    [HttpPost]
 
-    public IActionResult Privacy()
+    public IActionResult Index(string FullName,string Address)
     {
+        string strOutput ="xin chao" + FullName +"den tu" + Address;
+        ViewBag.Message = strOutput;
         return View();
     }
 

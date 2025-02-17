@@ -1,0 +1,8 @@
+D:\netcoreAPI\DemoMvc\obj\Debug\net9.0\DemoMvc.GeneratedMSBuildEditorConfig.editorconfig
+D:\netcoreAPI\DemoMvc\obj\Debug\net9.0\DemoMvc.AssemblyInfoInputs.cache
+D:\netcoreAPI\DemoMvc\obj\Debug\net9.0\DemoMvc.AssemblyInfo.cs
+D:\netcoreAPI\DemoMvc\obj\Debug\net9.0\DemoMvc.csproj.CoreCompileInputs.cache
+D:\netcoreAPI\DemoMvc\obj\Debug\net9.0\DemoMvc.MvcApplicationPartsAssemblyInfo.cache
+D:\netcoreAPI\DemoMvc\obj\Debug\net9.0\DemoMvc.RazorAssemblyInfo.cache
+D:\netcoreAPI\DemoMvc\obj\Debug\net9.0\DemoMvc.RazorAssemblyInfo.cs
+D:\netcoreAPI\DemoMvc\obj\Debug\net9.0\DemoMvc.sourcelink.json
