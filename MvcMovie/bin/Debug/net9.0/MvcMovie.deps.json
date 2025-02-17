@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v9.0": {
-      "DemoMvc/1.0.0": {
+      "MvcMovie/1.0.0": {
         "runtime": {
-          "DemoMvc.dll": {}
+          "MvcMovie.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "DemoMvc/1.0.0": {
+    "MvcMovie/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

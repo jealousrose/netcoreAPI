@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\netcoreAPI\\MvcMovie\\DemoMvc.csproj",
-      "projectName": "DemoMvc",
-      "projectPath": "D:\\netcoreAPI\\MvcMovie\\DemoMvc.csproj",
+      "projectUniqueName": "D:\\netcoreAPI\\MvcMovie\\MvcMovie.csproj",
+      "projectName": "MvcMovie",
+      "projectPath": "D:\\netcoreAPI\\MvcMovie\\MvcMovie.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
       "outputPath": "D:\\netcoreAPI\\MvcMovie\\obj\\",
       "projectStyle": "PackageReference",
