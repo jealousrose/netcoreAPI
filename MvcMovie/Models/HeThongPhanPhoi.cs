@@ -1,11 +1,17 @@
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MvcMovie.Models
 {
+    [Table("HeThongPhanPhoi")]
     public class HeThongPhanPhoi
     {
-        public int MaHTPP { get; set; } = 0;
-        public string TenHTPP { get; set; } = "";
-        public List<DaiLy> DaiLys { get; set; } = new List<DaiLy>();
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public string MaHTPP { get; set; }
+
+        [Required]
+        [StringLength(255)]
+        public string TenHTPP { get; set; }
     }
 }

@@ -10,5 +10,16 @@ namespace MvcMovie.Data
         }
 
         public DbSet<Person> Person { get; set; }
+
+        public DbSet<Employee> Employees { get; set; }
+
+        public DbSet<HeThongPhanPhoi> HeThongPhanPhois { get; set; }
+
+         public DbSet<Daily> Daily { get; set;}
+
+
+
+
     }
+
 }

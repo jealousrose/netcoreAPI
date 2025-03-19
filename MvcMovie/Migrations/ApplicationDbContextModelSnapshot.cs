@@ -19,8 +19,7 @@ namespace MvcMovie.Migrations
             modelBuilder.Entity("MvcMovie.Models.Person", b =>
                 {
                     b.Property<string>("PersonId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Address")
                         .IsRequired()
@@ -33,6 +32,35 @@ namespace MvcMovie.Migrations
                     b.HasKey("PersonId");
 
                     b.ToTable("Person");
+
+                    b.UseTptMappingStrategy();
+                });
+
+            modelBuilder.Entity("MvcMovie.Models.MvcMovie.Models.Employee", b =>
+                {
+                    b.HasBaseType("MvcMovie.Models.Person");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Position")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("Salary")
+                        .HasColumnType("TEXT");
+
+                    b.ToTable("Employee");
+                });
+
+            modelBuilder.Entity("MvcMovie.Models.MvcMovie.Models.Employee", b =>
+                {
+                    b.HasOne("MvcMovie.Models.Person", null)
+                        .WithOne()
+                        .HasForeignKey("MvcMovie.Models.MvcMovie.Models.Employee", "PersonId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

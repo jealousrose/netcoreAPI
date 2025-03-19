@@ -1,23 +1,24 @@
-using System; // Nhớ thêm using System nếu bạn dùng DateTime
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace MvcMovie.Models // Thay YourNamespace bằng namespace của bạn
+namespace MvcMovie.Models
 {
-    public class DaiLy
+    [Table("Daily")]
+    public class Daily
     {
-        public int MaDaiLy { get; set; } = 0;
-        public string TenDaiLy { get; set; } = "";
-        public string DiaChi { get; set; } = "";
-        public string NguoiDaiDien { get; set; } = "";
-        public string DienThoai { get; set; } = "";
+        [Key]
+        public int MaDaily { get; set; } // Đổi sang kiểu int nếu cần
 
-        public int MaHTPP { get; set; } // Khóa ngoại
+        public string? TenDaily { get; set; }
+        public string? DiaChi { get; set; }
+        public string? NguoiDaiDien { get; set; }
+        public string? DienThoai { get; set; }
 
-        public HeThongPhanPhoi HeThongPhanPhoi { get; set; } // Thuộc tính tham chiếu
+        // Khóa ngoại tham chiếu đến HeThongPhanPhoi
+        [ForeignKey("HeThongPhanPhoi")]
+        public int HeThongPhanPhoiId { get; set; }
 
-        // Cách 1: Khởi tạo HeThongPhanPhoi trong constructor
-        public DaiLy()
-        {
-            HeThongPhanPhoi = new HeThongPhanPhoi(); // Hoặc khởi tạo với dữ liệu cụ thể nếu cần
-        }
+        // Thuộc tính điều hướng (Navigation Property)
+        public HeThongPhanPhoi? HeThongPhanPhoi { get; set; }
     }
 }

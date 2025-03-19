@@ -1,8 +1,10 @@
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace MvcMovie.Models
 {
+    [Table("Employee")]
     public class Employee : Person
     {
-        public int EmployeeId { get; set; } = 0;
-        public string ChucVu { get; set; } = "";
+        public string? Email { get; set; }
     }
 }
